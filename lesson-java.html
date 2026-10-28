@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Java Basics - Dev-Mate</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header>
+		<nav class="navbar">
+			<a href="index.html" class="logo">Dev-Mate</a>
+			<ul class="nav-links">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About us</a></li>
+				<li><a href="languages.html">Languages</a></li>
+				<li><a href="service.html">Service</a></li>
+				<li><a href="playground.html">Playground</a></li>
+				<li><a href="contact.html">Contact us</a></li>	
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<section class="hero-section" style="padding: 4rem 2rem;">
+			<div class="hero-content">
+				<h1>ภาษา Java พื้นฐาน</h1>
+				<p>ราชาแห่งภาษา Enterprise ที่ทรงพลังและรองรับการทำงานขนาดใหญ่</p>
+			</div>
+		</section>
+
+		<section class="content-section" style="text-align: left; max-width: 800px;">
+			<h2>1. Java คืออะไร?</h2>
+			<p style="margin-bottom: 1.5rem;">Java เป็นภาษาโปรแกรมมิ่งแบบ Object-Oriented (OOP) ที่ได้รับความนิยมสูงสุดในกลุ่มองค์กรธนาคารและระบบขนาดใหญ่ รวมถึงเป็นภาษาหลักในการเขียนแอปพลิเคชัน Android จุดเด่นของ Java คือ "เขียนครั้งเดียว รันได้ทุกที่" (Write Once, Run Anywhere)</p>
+
+			<h2>2. โครงสร้างโปรแกรมแรก (Hello World)</h2>
+			<p style="margin-bottom: 1rem;">ภาษา Java บังคับให้ทุกโค้ดต้องอยู่ใน Class และมี Method <code>main</code> เป็นจุดเริ่มต้นเสมอ</p>
+			
+			<div class="code-block">
+<pre><code>public class Main {
+    public static void main(String[] args) {
+        // พิมพ์ข้อความออกทางหน้าจอ
+        System.out.println("Hello, World!");
+    }
+}</code></pre>
+			</div>
+
+			<h2>3. ตัวแปรและชนิดข้อมูล (Data Types)</h2>
+			<p style="margin-bottom: 1rem;">Java เป็นภาษาแบบ Strongly-typed คือต้องระบุชนิดข้อมูลให้ชัดเจน</p>
+			
+			<div class="code-block">
+<pre><code>int age = 25;             // จำนวนเต็ม
+double price = 99.99;     // ทศนิยม
+String name = "Mate";     // ข้อความ (ใช้ String ตัวใหญ่)
+boolean isActive = true;  // ค่าความจริง (true/false)
+
+System.out.println("ชื่อ: " + name + ", อายุ: " + age);</code></pre>
+			</div>
+
+			<h2>4. เงื่อนไข (If-Else)</h2>
+			<div class="code-block">
+<pre><code>int score = 85;
+
+if (score >= 80) {
+    System.out.println("ยอดเยี่ยม");
+} else if (score >= 50) {
+    System.out.println("ผ่าน");
+} else {
+    System.out.println("ต้องปรับปรุง");
+}</code></pre>
+			</div>
+
+			<div style="margin-top: 4rem; text-align: center;">
+				<p style="color: #666; margin-bottom: 1rem;">* ภาษา Java ไม่สามารถรันบนเบราว์เซอร์ได้โดยตรง ต้องติดตั้ง JDK บนเครื่องของคุณ</p>
+				<a href="languages.html" class="btn-primary">กลับไปหน้าภาษา</a>
+			</div>
+		</section>
+	</main>
+
+	<footer>
+		<p>&copy; 2026 Dev-Mate. Learn Coding for free. All rights reserved.</p>
+	</footer>
+</body>
+</html>

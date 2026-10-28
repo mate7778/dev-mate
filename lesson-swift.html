@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Swift Basics - Dev-Mate</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header>
+		<nav class="navbar">
+			<a href="index.html" class="logo">Dev-Mate</a>
+			<ul class="nav-links">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About us</a></li>
+				<li><a href="languages.html">Languages</a></li>
+				<li><a href="service.html">Service</a></li>
+				<li><a href="playground.html">Playground</a></li>
+				<li><a href="contact.html">Contact us</a></li>	
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<section class="hero-section" style="padding: 4rem 2rem;">
+			<div class="hero-content">
+				<h1>ภาษา Swift พื้นฐาน</h1>
+				<p>ภาษาสุดล้ำสำหรับการสร้างแอปพลิเคชันบน iPhone และ Mac</p>
+			</div>
+		</section>
+
+		<section class="content-section" style="text-align: left; max-width: 800px;">
+			<h2>1. Swift คืออะไร?</h2>
+			<p style="margin-bottom: 1.5rem;">Swift ถูกเปิดตัวโดย Apple ในปี 2014 เพื่อแทนที่ภาษา Objective-C เดิม มีจุดเด่นที่โค้ดอ่านง่าย ปลอดภัยสูง (Safe) และรวดเร็ว นิยมใช้ทำแอป iOS, macOS, watchOS และ tvOS</p>
+
+			<h2>2. โปรแกรมแรกของคุณ</h2>
+			<p style="margin-bottom: 1rem;">Swift ไม่บังคับให้มีฟังก์ชัน main ถ้าเขียนเป็น Script ทั่วไป</p>
+			<div class="code-block">
+<pre><code>import Foundation
+
+// พิมพ์ข้อความ
+print("Hello, World!")</code></pre>
+			</div>
+
+			<h2>3. ตัวแปรและค่าคงที่</h2>
+			<p style="margin-bottom: 1rem;">Swift แยกชัดเจนระหว่าง `var` (แก้ไขค่าได้) และ `let` (ค่าคงที่ ห้ามแก้)</p>
+			<div class="code-block">
+<pre><code>var age = 25     // เปลี่ยนค่าได้
+let name = "Mate" // เปลี่ยนค่าไม่ได้
+
+// การแทรกตัวแปรในข้อความ (String Interpolation)
+print("สวัสดี \(name) อายุ \(age) ปี")</code></pre>
+			</div>
+
+			<h2>4. Optionals (จุดเด่นของ Swift)</h2>
+			<p style="margin-bottom: 1rem;">Swift บังคับให้เราจัดการค่า Null (nil) อย่างปลอดภัยด้วย Optionals (<code>?</code>)</p>
+			<div class="code-block">
+<pre><code>var middleName: String? = nil // อาจจะมีหรือไม่มีค่าก็ได้
+
+if let safeName = middleName {
+    print("ชื่อกลางคือ \(safeName)")
+} else {
+    print("ไม่มีชื่อกลาง")
+}</code></pre>
+			</div>
+
+			<div style="margin-top: 4rem; text-align: center;">
+				<p style="color: #666; margin-bottom: 1rem;">* ภาษา Swift ต้องเขียนบนโปรแกรม Xcode ซึ่งใช้งานได้เฉพาะบน macOS เท่านั้น</p>
+				<a href="languages.html" class="btn-primary">กลับไปหน้าภาษา</a>
+			</div>
+		</section>
+	</main>
+
+	<footer>
+		<p>&copy; 2026 Dev-Mate. Learn Coding for free. All rights reserved.</p>
+	</footer>
+</body>
+</html>

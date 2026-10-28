@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Code Playground - Dev-Mate</title>
+	<link rel="stylesheet" href="style.css">
+	
+	<!-- โหลดไลบรารี Skulpt สำหรับรัน Python -->
+	<script src="https://cdn.jsdelivr.net/npm/skulpt@1.2.0/dist/skulpt.min.js" type="text/javascript"></script>
+	<script src="https://cdn.jsdelivr.net/npm/skulpt@1.2.0/dist/skulpt-stdlib.js" type="text/javascript"></script>
+</head>
+<body>
+	
+	<header>
+		<nav class="navbar">
+			<a href="index.html" class="logo">Dev-Mate</a>
+			<ul class="nav-links">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About us</a></li>
+				<li><a href="languages.html">Languages</a></li>
+				<li><a href="service.html">Service</a></li>
+				<li><a href="playground.html">Playground</a></li>
+				<li><a href="contact.html">Contact us</a></li>	
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<section class="hero-static">
+			<div class="hero-content">
+				<h1>Code Playground</h1>
+				<p>เลือกภาษา ทดลองเขียนโค้ด และดูผลลัพธ์ได้ทันที!</p>
+			</div>
+		</section>
+
+		<section class="content-section">
+			<!-- ปุ่มสลับภาษา (Tabs) -->
+			<div class="playground-tabs">
+				<button class="tab-btn active" onclick="switchTab('html')">🌐 HTML/CSS</button>
+				<button class="tab-btn" onclick="switchTab('python')">🐍 Python</button>
+				<button class="tab-btn" onclick="switchTab('js')">⚡ JavaScript</button>
+				<button class="tab-btn" onclick="switchTab('other')">📦 ภาษาอื่นๆ</button>
+			</div>
+
+			<!-- ================= 1. ส่วนของ HTML ================= -->
+			<div id="html-playground" class="playground-container">
+				<div class="editor-panel">
+					<div class="panel-header">
+						<span>HTML Code</span>
+						<button onclick="runHtmlCode()" class="btn-primary btn-small">▶ รันโค้ด (Run)</button>
+					</div>
+					<textarea id="html-editor" spellcheck="false"><h1>สวัสดีครับ!</h1>
+<p>นี่คือหน้าเว็บที่ผมเขียนเอง</p>
+<ul>
+  <li>ลองเปลี่ยนข้อความดูสิ</li>
+  <li>หรือเพิ่มแท็กใหม่ๆ เข้าไป</li>
+</ul></textarea>
+				</div>
+				<div class="preview-panel">
+					<div class="panel-header">
+						<span>ผลลัพธ์ (Preview)</span>
+						<button onclick="clearHtmlPreview()" class="btn-secondary btn-small">🧹 ล้างหน้าจอ</button>
+					</div>
+					<iframe id="html-preview"></iframe>
+				</div>
+			</div>
+
+			<!-- ================= 2. ส่วนของ Python ================= -->
+			<div id="python-playground" class="playground-container" style="display: none;">
+				<div class="editor-panel">
+					<div class="panel-header">
+						<span>Python Code</span>
+						<button onclick="runPythonCode()" class="btn-primary btn-small">▶ รันโค้ด (Run)</button>
+					</div>
+					<textarea id="python-editor" spellcheck="false">print("สวัสดีชาวโลก! (Hello World)")
+print("ยินดีต้อนรับสู่ Dev-Mate")
+
+# ลองบวกเลขง่ายๆ
+a = 10
+b = 20
+print("ผลบวกของ", a, "และ", b, "คือ", a + b)</textarea>
+				</div>
+				<div class="preview-panel">
+					<div class="panel-header">
+						<span>ผลลัพธ์ (Console Output)</span>
+						<button onclick="clearPythonPreview()" class="btn-secondary btn-small">🧹 ล้างหน้าจอ</button>
+					</div>
+					<pre id="python-output" style="flex: 1; background: #000; color: #00ff00; padding: 1.5rem; margin: 0; overflow-y: auto; font-family: 'Courier New', monospace;">พร้อมทำงาน...</pre>
+				</div>
+			</div>
+
+			<!-- ================= 3. ส่วนของ JavaScript ================= -->
+			<div id="js-playground" class="playground-container" style="display: none;">
+				<div class="editor-panel">
+					<div class="panel-header">
+						<span>JavaScript Code</span>
+						<button onclick="runJsCode()" class="btn-primary btn-small">▶ รันโค้ด (Run)</button>
+					</div>
+					<textarea id="js-editor" spellcheck="false">// ลองเขียน JavaScript ดูสิ!
+console.log("Hello from JavaScript!");
+
+let a = 5;
+let b = 10;
+console.log("ผลบวกคือ:", a + b);</textarea>
+				</div>
+				<div class="preview-panel">
+					<div class="panel-header">
+						<span>ผลลัพธ์ (Console Output)</span>
+						<button onclick="clearJsPreview()" class="btn-secondary btn-small">🧹 ล้างหน้าจอ</button>
+					</div>
+					<pre id="js-output" style="flex: 1; background: #1e1e1e; color: #d4d4d4; padding: 1.5rem; margin: 0; overflow-y: auto; font-family: 'Courier New', monospace;">พร้อมทำงาน...</pre>
+				</div>
+			</div>
+
+			<!-- ================= 4. ส่วนของภาษาอื่นๆ (Java, C++, C#, Swift, Go) ================= -->
+			<div id="other-playground" class="playground-container" style="display: none; height: auto;">
+				<div class="editor-panel" style="grid-column: span 2;">
+					<div class="panel-header">
+						<span>ภาษาอื่นๆ (ต้องการ Compiler ในการรัน)</span>
+					</div>
+					<div style="padding: 2rem; text-align: center;">
+						<p style="color: #666; margin-bottom: 2rem;">เบราว์เซอร์ไม่สามารถรันภาษาเหล่านี้ได้โดยตรง แต่คุณสามารถดูตัวอย่างโค้ดเพื่อนำไปรันบนเครื่องของคุณเองได้</p>
+						
+						<!-- ปุ่มเลือกภาษา -->
+						<div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem;">
+							<button onclick="showOtherCode('java')" class="btn-secondary btn-small">Java</button>
+							<button onclick="showOtherCode('cpp')" class="btn-secondary btn-small">C++</button>
+							<button onclick="showOtherCode('csharp')" class="btn-secondary btn-small">C#</button>
+							<button onclick="showOtherCode('swift')" class="btn-secondary btn-small">Swift</button>
+							<button onclick="showOtherCode('go')" class="btn-secondary btn-small">Go</button>
+						</div>
+
+						<!-- กล่องแสดงโค้ด -->
+						<div class="code-block" style="text-align: left; max-width: 800px; margin: 0 auto;">
+							<pre><code id="other-code-display">// เลือกภาษาด้านบนเพื่อดูตัวอย่างโค้ด</code></pre>
+						</div>
+						
+						<p style="margin-top: 1.5rem;"><a href="languages.html" style="color: #e94560; font-weight: bold;">ไปที่หน้าบทเรียนเพื่ออ่านเพิ่มเติม</a></p>
+					</div>
+				</div>
+			</div>
+
+		</section>
+	</main>
+
+	<footer>
+		<p>&copy; 2026 Dev-Mate. Learn Coding for free. All rights reserved.</p>
+	</footer>
+
+	<script>
+		// ==========================================
+		// ระบบสลับแท็บ (Tabs)
+		// ==========================================
+		function switchTab(lang) {
+			// ซ่อนทุกแท็บ
+			const tabs = ['html', 'python', 'js', 'other'];
+			tabs.forEach(t => document.getElementById(t + '-playground').style.display = 'none');
+			
+			// เอาคลาส active ออกจากปุ่มทั้งหมด
+			document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+
+			// เปิดแท็บที่เลือก
+			document.getElementById(lang + '-playground').style.display = 'grid';
+			
+			// หาปุ่มที่ถูกกดเพื่อใส่คลาส active
+			const buttons = document.querySelectorAll('.tab-btn');
+			if(lang === 'html') buttons[0].classList.add('active');
+			if(lang === 'python') buttons[1].classList.add('active');
+			if(lang === 'js') buttons[2].classList.add('active');
+			if(lang === 'other') buttons[3].classList.add('active');
+		}
+
+		// ==========================================
+		// 1. ระบบรันโค้ด HTML
+		// ==========================================
+		function runHtmlCode() {
+			const editor = document.getElementById('html-editor');
+			const frame = document.getElementById('html-preview');
+			const frameDoc = frame.contentDocument || frame.contentWindow.document;
+			frameDoc.open();
+			frameDoc.write(editor.value);
+			frameDoc.close();
+		}
+		function clearHtmlPreview() {
+			const frame = document.getElementById('html-preview');
+			const frameDoc = frame.contentDocument || frame.contentWindow.document;
+			frameDoc.open();
+			frameDoc.write("<p style='color: #aaa; text-align: center; margin-top: 2rem;'>หน้าจอว่างเปล่า...</p>");
+			frameDoc.close();
+		}
+
+		// ==========================================
+		// 2. ระบบรันโค้ด Python (Skulpt)
+		// ==========================================
+		function runPythonCode() {
+			const code = document.getElementById('python-editor').value;
+			const output = document.getElementById('python-output');
+			output.innerHTML = '';
+			
+			function outf(text) { output.innerHTML += text + "<br>"; }
+			function builtinRead(x) {
+				if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
+					throw "File not found: '" + x + "'";
+				return Sk.builtinFiles["files"][x];
+			}
+			Sk.configure({ output: outf, read: builtinRead });
+			
+			try {
+				Sk.misceval.asyncToPromise(function() {
+					return Sk.importMainWithBody("<stdin>", false, code, true);
+				}).catch(function(err) {
+					output.innerHTML += `<span style="color: #ff5555;">Error: ${err.toString()}</span>`;
+				});
+			} catch (e) {
+				output.innerHTML += `<span style="color: #ff5555;">Error: ${e.toString()}</span>`;
+			}
+		}
+		function clearPythonPreview() {
+			document.getElementById('python-output').innerHTML = 'พร้อมทำงาน...';
+		}
+
+		// ==========================================
+		// 3. ระบบรันโค้ด JavaScript
+		// ==========================================
+		function runJsCode() {
+			const code = document.getElementById('js-editor').value;
+			const output = document.getElementById('js-output');
+			output.innerHTML = ''; // ล้างหน้าจอ
+
+			// ดักจับคำสั่ง console.log
+			const originalLog = console.log;
+			console.log = function(...args) {
+				output.innerHTML += args.join(" ") + "<br>";
+				originalLog.apply(console, args); // ให้แสดงใน DevTools ด้วย
+			};
+
+			try {
+				// ใช้ eval เพื่อรันโค้ด (ระวัง: ไม่ควรใช้ในเว็บProduction จริงๆ)
+				eval(code);
+			} catch (error) {
+				output.innerHTML += `<span style="color: #ff5555;">Error: ${error.message}</span>`;
+			} finally {
+				// คืนค่า console.log กลับมาเป็นเหมือนเดิม
+				console.log = originalLog;
+			}
+		}
+		function clearJsPreview() {
+			document.getElementById('js-output').innerHTML = 'พร้อมทำงาน...';
+		}
+
+		// ==========================================
+		// 4. ระบบแสดงโค้ดภาษาอื่นๆ
+		// ==========================================
+		const otherCodes = {
+			java: `public class Main {\n    public static void main(String[] args) {\n        System.out.println("Hello, Java!");\n    }\n}`,
+			cpp: `#include &lt;iostream&gt;\nusing namespace std;\n\nint main() {\n    cout &lt;&lt; "Hello, C++!" &lt;&lt; endl;\n    return 0;\n}`,
+			csharp: `using System;\n\nclass Program {\n    static void Main() {\n        Console.WriteLine("Hello, C#!");\n    }\n}`,
+			swift: `import Foundation\n\nprint("Hello, Swift!")`,
+			go: `package main\n\nimport "fmt"\n\nfunc main() {\n    fmt.Println("Hello, Go!")\n}`
+		};
+
+		function showOtherCode(lang) {
+			const display = document.getElementById('other-code-display');
+			display.innerHTML = otherCodes[lang];
+		}
+
+		// รันโค้ด HTML อัตโนมัติเมื่อเปิดหน้าเว็บครั้งแรก
+		window.onload = function() {
+			runHtmlCode();
+		};
+	</script>
+
+</body>
+</html>

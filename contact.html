@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Contact Us - Dev-Mate</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	
+	<header>
+		<nav class="navbar">
+			<a href="index.html" class="logo">Dev-Mate</a>
+			<ul class="nav-links">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About us</a></li>
+				<li><a href="languages.html">Languages</a></li>
+				<li><a href="service.html">Service</a></li>
+				<li><a href="playground.html">Playground</a></li>
+				<li><a href="contact.html">Contact us</a></li>	
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<section class="content-section" style="margin-top: 5rem;">
+			<h2>ติดต่อสอบถาม & แจ้งปัญหา</h2>
+			<p style="margin-bottom: 2rem;">ติดขัดตอนเขียน CODE หรือมีข้อสงสัยเกี่ยวกับบทเรียน? ส่งข้อความหาทีมงานได้เลย!</p>
+			
+			
+			<form action="https://formspree.io/f/xgaakgaq" method="POST" style="max-width: 600px; margin: 0 auto; text-align: left; background: #fff; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+				
+				<div style="margin-bottom: 1rem;">
+					<label for="name" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">ชื่อของคุณ</label>
+					<input type="text" id="name" name="name" required style="width: 100%; padding: 0.8rem; border: 1px solid #ccc; border-radius: 5px;">
+				</div>
+
+				<div style="margin-bottom: 1rem;">
+					<label for="email" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">อีเมลของคุณ (สำหรับรับคำตอบ)</label>
+					<input type="email" id="email" name="email" required style="width: 100%; padding: 0.8rem; border: 1px solid #ccc; border-radius: 5px;">
+				</div>
+
+				<div style="margin-bottom: 1.5rem;">
+					<label for="message" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">ข้อความ / โค้ดที่ติดปัญหา</label>
+					<textarea id="message" name="message" rows="6" required placeholder="อธิบายปัญหาของคุณ หรือแปะโค้ดที่ต้องการให้ช่วยดู..." style="width: 100%; padding: 0.8rem; border: 1px solid #ccc; border-radius: 5px; font-family: inherit;"></textarea>
+				</div>
+
+				<button type="submit" class="btn-primary" style="width: 100%; border: none; cursor: pointer;">ส่งข้อความ</button>
+			</form>
+		</section>
+	</main>
+
+	<footer>
+		<p>&copy; 2026 Dev-Mate. Learn HTML & Python for free. All rights reserved.</p>
+	</footer>
+
+</body>
+</html>

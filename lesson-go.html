@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Go Basics - Dev-Mate</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header>
+		<nav class="navbar">
+			<a href="index.html" class="logo">Dev-Mate</a>
+			<ul class="nav-links">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About us</a></li>
+				<li><a href="languages.html">Languages</a></li>
+				<li><a href="service.html">Service</a></li>
+				<li><a href="playground.html">Playground</a></li>
+				<li><a href="contact.html">Contact us</a></li>	
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<section class="hero-section" style="padding: 4rem 2rem;">
+			<div class="hero-content">
+				<h1>ภาษา Go (Golang) พื้นฐาน</h1>
+				<p>ภาษาสายสปีดจาก Google ที่ครองใจสาย Cloud และ Microservices</p>
+			</div>
+		</section>
+
+		<section class="content-section" style="text-align: left; max-width: 800px;">
+			<h2>1. Go คืออะไร?</h2>
+			<p style="margin-bottom: 1.5rem;">Go (หรือ Golang) ถูกสร้างโดย Google เพื่อแก้ปัญหาเรื่องความซับซ้อนของภาษา C++ และ Java จุดเด่นคือมีโครงสร้างที่เรียบง่าย คอมไพล์เร็วมาก และมีระบบจัดการ Concurrency (การทำงานหลายอย่างพร้อมกัน) ที่ยอดเยี่ยม นิยมใช้ทำ API, ระบบ Cloud (เช่น Docker, Kubernetes เขียนด้วย Go)</p>
+
+			<h2>2. โครงสร้างโปรแกรมแรก</h2>
+			<div class="code-block">
+<pre><code>package main
+
+import "fmt"
+
+func main() {
+    // พิมพ์ข้อความ
+    fmt.Println("Hello, World!")
+}</code></pre>
+			</div>
+
+			<h2>3. ตัวแปรและการประกาศ</h2>
+			<p style="margin-bottom: 1rem;">Go มีวิธีประกาศตัวแปรได้หลายแบบ และมี Type Inference (เดาชนิดข้อมูลให้)</p>
+			<div class="code-block">
+<pre><code>var name string = "Mate"
+age := 25 // ใช้ := ในการประกาศและกำหนดค่าพร้อมกัน (เดาชนิดเป็น int)
+
+fmt.Println("สวัสดี", name)
+fmt.Printf("อายุ: %d ปี\n", age)</code></pre>
+			</div>
+
+			<h2>4. การทำงานซ้ำ (For Loop)</h2>
+			<p style="margin-bottom: 1rem;">ในภาษา Go ไม่มี While Loop ใช้แค่ `for` เท่านั้น</p>
+			<div class="code-block">
+<pre><code>// ลูปแบบปกติ
+for i := 1; i &lt;= 3; i++ {
+    fmt.Println("รอบที่", i)
+}
+
+// ลูปแบบนับไม่ถ้วน (คล้าย While)
+count := 0
+for count &lt; 3 {
+    fmt.Println("นับ:", count)
+    count++
+}</code></pre>
+			</div>
+
+			<div style="margin-top: 4rem; text-align: center;">
+				<p style="color: #666; margin-bottom: 1rem;">* ภาษา Go ต้องติดตั้ง Go Compiler (สามารถดาวน์โหลดได้ฟรีที่ go.dev)</p>
+				<a href="languages.html" class="btn-primary">กลับไปหน้าภาษา</a>
+			</div>
+		</section>
+	</main>
+
+	<footer>
+		<p>&copy; 2026 Dev-Mate. Learn Coding for free. All rights reserved.</p>
+	</footer>
+</body>
+</html>

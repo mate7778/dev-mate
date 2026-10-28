@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>C++ Basics - Dev-Mate</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header>
+		<nav class="navbar">
+			<a href="index.html" class="logo">Dev-Mate</a>
+			<ul class="nav-links">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About us</a></li>
+				<li><a href="languages.html">Languages</a></li>
+				<li><a href="service.html">Service</a></li>
+				<li><a href="playground.html">Playground</a></li>
+				<li><a href="contact.html">Contact us</a></li>	
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<section class="hero-section" style="padding: 4rem 2rem;">
+			<div class="hero-content">
+				<h1>ภาษา C++ พื้นฐาน</h1>
+				<p>สุดยอดภาษาสายประสิทธิภาพสูง สำหรับงานที่ต้องการความเร็วเป็นเลิศ</p>
+			</div>
+		</section>
+
+		<section class="content-section" style="text-align: left; max-width: 800px;">
+			<h2>1. C++ คืออะไร?</h2>
+			<p style="margin-bottom: 1.5rem;">C++ เป็นภาษาที่ต่อยอดมาจากภาษา C มีความเร็วในการประมวลผลสูงมาก นิยมใช้พัฒนาเกม (Game Engine ระดับโลหะอย่าง Unreal Engine), ระบบปฏิบัติการ, และโปรแกรมที่ต้องการจัดการหน่วยความจำอย่างละเอียด</p>
+
+			<h2>2. โครงสร้างโปรแกรมแรก</h2>
+			<p style="margin-bottom: 1rem;">เราต้องนำเข้า Library <code>iostream</code> เพื่อใช้ในการรับส่งข้อมูล</p>
+			
+			<div class="code-block">
+<pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    // พิมพ์ข้อความและขึ้นบรรทัดใหม่
+    cout &lt;&lt; "Hello, World!" &lt;&lt; endl;
+    return 0; // บอกว่าโปรแกรมทำงานจบแบบไม่มีข้อผิดพลาด
+}</code></pre>
+			</div>
+
+			<h2>3. ตัวแปรและการรับค่าจากคีย์บอร์ด</h2>
+			<div class="code-block">
+<pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int age;
+    string name;
+    
+    cout &lt;&lt; "กรุณากรอกชื่อ: ";
+    cin &gt;&gt; name; // รับค่าจากคีย์บอร์ด
+    
+    cout &lt;&lt; "สวัสดี " &lt;&lt; name &lt;&lt; endl;
+    return 0;
+}</code></pre>
+			</div>
+
+			<h2>4. ลูป (For Loop)</h2>
+			<div class="code-block">
+<pre><code>for (int i = 1; i &lt;= 5; i++) {
+    cout &lt;&lt; "รอบที่ " &lt;&lt; i &lt;&lt; endl;
+}</code></pre>
+			</div>
+
+			<div style="margin-top: 4rem; text-align: center;">
+				<p style="color: #666; margin-bottom: 1rem;">* ภาษา C++ ต้องใช้ Compiler (เช่น GCC, MinGW) ในการคอมไพล์โค้ดก่อนรัน</p>
+				<a href="languages.html" class="btn-primary">กลับไปหน้าภาษา</a>
+			</div>
+		</section>
+	</main>
+
+	<footer>
+		<p>&copy; 2026 Dev-Mate. Learn Coding for free. All rights reserved.</p>
+	</footer>
+</body>
+</html>

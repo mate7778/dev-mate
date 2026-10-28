@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>C# Basics - Dev-Mate</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header>
+		<nav class="navbar">
+			<a href="index.html" class="logo">Dev-Mate</a>
+			<ul class="nav-links">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About us</a></li>
+				<li><a href="languages.html">Languages</a></li>
+				<li><a href="service.html">Service</a></li>
+				<li><a href="playground.html">Playground</a></li>
+				<li><a href="contact.html">Contact us</a></li>	
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<section class="hero-section" style="padding: 4rem 2rem;">
+			<div class="hero-content">
+				<h1>ภาษา C# พื้นฐาน</h1>
+				<p>ภาษาสุดคลาสสิกจาก Microsoft ผู้อยู่เบื้องหลังเกม Unity และแอป Windows</p>
+			</div>
+		</section>
+
+		<section class="content-section" style="text-align: left; max-width: 800px;">
+			<h2>1. C# (C-Sharp) คืออะไร?</h2>
+			<p style="margin-bottom: 1.5rem;">C# เป็นภาษาที่พัฒนาโดย Microsoft มีความทันสมัยและจัดการหน่วยความจำอัตโนมัติ (Garbage Collection) นิยมใช้พัฒนาเกมด้วย Unity, พัฒนาแอปพลิเคชัน Windows และระบบหลังบ้านด้วย .NET Framework</p>
+
+			<h2>2. โครงสร้างโปรแกรมแรก</h2>
+			<div class="code-block">
+<pre><code>using System;
+
+class Program {
+    static void Main() {
+        // พิมพ์ข้อความออกหน้าจอ
+        Console.WriteLine("Hello, World!");
+    }
+}</code></pre>
+			</div>
+
+			<h2>3. ตัวแปรและ String Interpolation</h2>
+			<p style="margin-bottom: 1rem;">C# มีลูกเล่นการแทรกตัวแปรลงในข้อความด้วยเครื่องหมาย <code>$</code> ที่อ่านง่ายมาก</p>
+			<div class="code-block">
+<pre><code>string name = "Mate";
+int age = 25;
+
+// ใช้ $ นำหน้าข้อความ แล้วใส่ตัวแปรใน {}
+Console.WriteLine($"สวัสดี {name} อายุ {age} ปี");</code></pre>
+			</div>
+
+			<h2>4. การสร้างฟังก์ชัน (Methods)</h2>
+			<div class="code-block">
+<pre><code>static int AddNumbers(int a, int b) {
+    return a + b;
+}
+
+static void Main() {
+    int result = AddNumbers(5, 10);
+    Console.WriteLine("ผลบวกคือ: " + result);
+}</code></pre>
+			</div>
+
+			<div style="margin-top: 4rem; text-align: center;">
+				<p style="color: #666; margin-bottom: 1rem;">* ภาษา C# ต้องใช้ .NET SDK และโปรแกรมอย่าง Visual Studio ในการรัน</p>
+				<a href="languages.html" class="btn-primary">กลับไปหน้าภาษา</a>
+			</div>
+		</section>
+	</main>
+
+	<footer>
+		<p>&copy; 2026 Dev-Mate. Learn Coding for free. All rights reserved.</p>
+	</footer>
+</body>
+</html>
