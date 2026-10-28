@@ -660,3 +660,57 @@ footer {
 	font-size: 1rem;
 	line-height: 1.6;
 }
+/* =========================================
+   15. สไตล์สำหรับหน้าบทเรียน (Lesson Content)
+   ========================================= */
+.lesson-content-box {
+	background-color: #fff;
+	padding: 2rem;
+	border-radius: 10px;
+	box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+	margin-bottom: 2rem;
+	border-left: 5px solid #e94560;
+}
+
+.lesson-content-box h2 {
+	font-size: 1.5rem;
+	color: #1a1a2e;
+	margin-bottom: 1rem;
+	margin-top: 0;
+}
+
+.lesson-content-box p {
+	color: #444;
+	line-height: 1.8;
+	margin-bottom: 1rem;
+}
+
+.lesson-content-box ul {
+	margin-left: 1.5rem;
+	margin-bottom: 1rem;
+	color: #444;
+}
+
+.lesson-content-box li {
+	margin-bottom: 0.5rem;
+}
+/* =========================================
+   แก้ปัญหาสีตัวหนังสือการ์ดบทเรียนที่เปลี่ยนเป็นสีม่วง/น้ำเงิน
+   ========================================= */
+
+/* สั่งให้การ์ดที่เป็นลิงก์ ใช้สีตัวอักษรเดียวกับ body (สีดำ) */
+a.lesson-card {
+	color: inherit; 
+	text-decoration: none; /* ลบเส้นใต้ */
+}
+
+/* สั่งให้หัวข้อ h3 และย่อหน้า p ในการ์ดลิงก์ ใช้สีดำ */
+a.lesson-card h3,
+a.lesson-card p {
+	color: inherit;
+}
+
+/* ทำให้ตอนเอาเมาส์ชี้ (Hover) หัวข้อเป็นสีชมพูตามธีมเว็บ */
+a.lesson-card:hover h3 {
+	color: #e94560;
+}

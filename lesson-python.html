@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>บทเรียน Python พื้นฐาน - Dev-Mate</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header>
+		<nav class="navbar">
+			<a href="index.html" class="logo">Dev-Mate</a>
+			<ul class="nav-links">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About us</a></li>
+				<li><a href="languages.html">Languages</a></li>
+				<li><a href="service.html">Service</a></li>
+				<li><a href="playground.html">Playground</a></li>
+				<li><a href="contact.html">Contact us</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<section class="hero-static">
+			<h1>บทเรียน: Python พื้นฐาน</h1>
+			<p>ภาษาโปรแกรมมิ่งที่อ่านง่ายที่สุดในโลก</p>
+		</section>
+
+		<section class="content-section" style="text-align: left; max-width: 900px;">
+			
+			<div class="lesson-content-box">
+				<h2>1. ทำความรู้จักกับ Python</h2>
+				<p>Python เป็นภาษาโปรแกรมมิ่งที่ได้รับความนิยมสูงมากในปัจจุบัน จุดเด่นคือโค้ดอ่านง่ายเหมือนภาษาอังกฤษ และไม่ต้องพิมพ์เครื่องหมายปีกกา <code>{ }</code> ให้วุ่นวายใจ</p>
+			</div>
+
+			<div class="lesson-content-box">
+				<h2>2. การแสดงผล (Print)</h2>
+				<p>ฟังก์ชันพื้นฐานที่สุดคือ <code>print()</code> ใช้สำหรับแสดงข้อความหรือตัวเลขออกทางหน้าจอ</p>
+				<div class="code-block">
+<pre><code>print("สวัสดีครับ!")
+print("ยินดีต้อนรับสู่ Python")
+print(10 + 5)</code></pre>
+				</div>
+				<p>ผลลัพธ์ที่ได้:
+				<br>สวัสดีครับ!
+				<br>ยินดีต้อนรับสู่ Python
+				<br>15</p>
+			</div>
+
+			<div class="lesson-content-box">
+				<h2>3. ตัวแปร (Variables)</h2>
+				<p>ตัวแปรคือกล่องสำหรับเก็บข้อมูล เราสามารถสร้างตัวแปรและนำไปใช้ทีหลังได้เลย โดยไม่ต้องระบุชนิดข้อมูล</p>
+				<div class="code-block">
+<pre><code>name = "Mate"
+age = 25
+
+print("สวัสดี " + name)
+print("คุณอายุ", age, "ปี")</code></pre>
+				</div>
+			</div>
+
+			<div class="lesson-content-box">
+				<h2>4. การรับค่าจากผู้ใช้ (Input)</h2>
+				<p>เราสามารถให้โปรแกรมถามข้อมูลจากผู้ใช้ได้ด้วยฟังก์ชัน <code>input()</code></p>
+				<div class="code-block">
+<pre><code>user_name = input("กรุณากรอกชื่อของคุณ: ")
+print("สวัสดีคุณ " + user_name)</code></pre>
+				</div>
+			</div>
+
+			<!-- ปุ่มนำทาง -->
+			<div style="margin-top: 3rem; text-align: center;">
+				<h3 style="margin-bottom: 1rem;">ลองรันโค้ด Python ด้วยตัวเอง?</h3>
+				<a href="playground.html" class="btn-primary">ไปที่ Playground</a>
+				<a href="index.html" class="btn-secondary" style="padding: 0.8rem 2rem; border-radius: 5px; text-decoration: none; display: inline-block; margin-left: 10px;">กลับหน้าแรก</a>
+			</div>
+
+		</section>
+	</main>
+
+	<footer>
+		<p>&copy; 2026 Dev-Mate. Learn Coding for free. All rights reserved.</p>
+	</footer>
+</body>
+</html>

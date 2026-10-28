@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>บทเรียน HTML พื้นฐาน - Dev-Mate</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header>
+		<nav class="navbar">
+			<a href="index.html" class="logo">Dev-Mate</a>
+			<ul class="nav-links">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About us</a></li>
+				<li><a href="languages.html">Languages</a></li>
+				<li><a href="service.html">Service</a></li>
+				<li><a href="playground.html">Playground</a></li>
+				<li><a href="contact.html">Contact us</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<section class="hero-static">
+			<h1>บทเรียน: HTML พื้นฐาน</h1>
+			<p>เริ่มต้นสร้างโครงสร้างเว็บไซต์แรกของคุณ</p>
+		</section>
+
+		<section class="content-section" style="text-align: left; max-width: 900px;">
+			
+			<!-- บทที่ 1 -->
+			<div class="lesson-content-box">
+				<h2>1. HTML คืออะไร?</h2>
+				<p>HTML (HyperText Markup Language) ไม่ใช่ภาษาโปรแกรมมิ่ง แต่เป็นภาษาที่ใช้ "ติดป้าย" (Markup) ข้อความหรือรูปภาพ เพื่อบอกเบราว์เซอร์ว่า <strong>"ส่วนนี้คือหัวข้อ", "ส่วนนี้คือย่อหน้า", "ส่วนนี้คือรูปภาพ"</strong></p>
+				<p>ลองนึกภาพว่า HTML คือโครงกระดูกของมนุษย์ ส่วน CSS คือผิวหนังและเสื้อผ้า และ JavaScript คือสมองที่ทำให้เราขยับได้ครับ</p>
+			</div>
+
+			<!-- บทที่ 2 -->
+			<div class="lesson-content-box">
+				<h2>2. โครงสร้างของไฟล์ HTML</h2>
+				<p>ทุกไฟล์ HTML จะต้องมีโครงสร้างพื้นฐานแบบนี้เสมอ:</p>
+				<div class="code-block">
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;ชื่อเว็บของฉัน&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- เนื้อหาที่จะแสดงบนหน้าจอ --&gt;
+    &lt;h1&gt;สวัสดีชาวโลก&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+				</div>
+				<ul>
+					<li><code>&lt;!DOCTYPE html&gt;</code>: บอกเบราว์เซอร์ว่านี่คือไฟล์ HTML5</li>
+					<li><code>&lt;head&gt;</code>: ส่วนเก็บข้อมูลเบื้องหลัง (เช่น ชื่อเว็บ, ภาษาที่ใช้) จะไม่แสดงบนหน้าจอ</li>
+					<li><code>&lt;body&gt;</code>: ส่วนที่จะแสดงผลให้ผู้ใช้เห็นทั้งหมด</li>
+				</ul>
+			</div>
+
+			<!-- บทที่ 3 -->
+			<div class="lesson-content-box">
+				<h2>3. แท็ก (Tags) และ องค์ประกอบ (Elements)</h2>
+				<p>HTML ใช้เครื่องหมาย <code>&lt;</code> และ <code>&gt;</code> ในการสร้างแท็ก โดยทั่วไปจะมีแท็กเปิดและแท็กปิด เช่น:</p>
+				<div class="code-block">
+<pre><code>&lt;h1&gt;นี่คือหัวข้อใหญ่&lt;/h1&gt;
+&lt;p&gt;นี่คือย่อหน้าข้อความ&lt;/p&gt;</code></pre>
+				</div>
+				<p>หัวข้อ (Heading) มีตั้งแต่ <code>&lt;h1&gt;</code> ถึง <code>&lt;h6&gt;</code> โดย h1 ตัวใหญ่สุด และ h6 ตัวเล็กสุด</p>
+			</div>
+
+			<!-- ปุ่มนำทาง -->
+			<div style="margin-top: 3rem; text-align: center;">
+				<h3 style="margin-bottom: 1rem;">ลองเขียนโค้ด HTML ด้วยตัวเอง?</h3>
+				<a href="playground.html" class="btn-primary">ไปที่ Playground</a>
+				<a href="index.html" class="btn-secondary" style="padding: 0.8rem 2rem; border-radius: 5px; text-decoration: none; display: inline-block; margin-left: 10px;">กลับหน้าแรก</a>
+			</div>
+
+		</section>
+	</main>
+
+	<footer>
+		<p>&copy; 2026 Dev-Mate. Learn Coding for free. All rights reserved.</p>
+	</footer>
+</body>
+</html>
