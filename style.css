@@ -714,3 +714,37 @@ a.lesson-card p {
 a.lesson-card:hover h3 {
 	color: #e94560;
 }
+/* =========================================
+   16. สไตล์สำหรับหน้า Donate (สนับสนุน)
+   ========================================= */
+.donate-container {
+	max-width: 600px;
+	margin: 0 auto;
+	background-color: #fff;
+	padding: 3rem 2rem;
+	border-radius: 15px;
+	box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+	border: 2px dashed #e94560; /* ขอบเส้นประสีชมพูให้ดูเป็นกันเอง */
+}
+
+.donate-container h2 {
+	color: #1a1a2e;
+	margin-bottom: 0.5rem;
+}
+
+/* กล่องใส่ QR Code */
+.qr-box {
+	margin: 2rem 0;
+	padding: 1.5rem;
+	background-color: #f8f9fa;
+	border-radius: 10px;
+	border: 1px solid #eee;
+}
+
+/* ข้อความขอบคุณ */
+.thanks-message {
+	margin-top: 2rem;
+	font-size: 1.1rem;
+	color: #333;
+	font-weight: 500;
+}
