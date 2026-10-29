@@ -748,3 +748,10 @@ a.lesson-card:hover h3 {
 	color: #333;
 	font-weight: 500;
 }
+/* สไตล์สำหรับลิงก์ที่ต้องการเว้นระยะห่าง */
+.link-btn {
+    color: #e94560; 
+    font-weight: bold;
+    display: inline-block; 
+    margin-right: 20px; /* เว้นระยะห่างทางขวา 20px */
+}
