@@ -755,3 +755,118 @@ a.lesson-card:hover h3 {
     display: inline-block; 
     margin-right: 20px; /* เว้นระยะห่างทางขวา 20px */
 }
+/* =========================================
+   17. ปรับแต่งหน้าเว็บให้รองรับมือถือและแท็บเล็ต (Responsive)
+   ========================================= */
+
+/* สำหรับหน้าจอแท็บเล็ต (กว้างไม่เกิน 900px) */
+@media (max-width: 900px) {
+	/* ปรับ Playground ให้เรียงบนลงล่าง */
+	.playground-container {
+		grid-template-columns: 1fr; /* 1 คอลัมน์ */
+		height: auto;
+	}
+	
+	#html-editor, #python-editor, #js-editor, #html-preview {
+		min-height: 300px; /* ลดความสูงลงไม่ให้จอเบียดเกินไป */
+	}
+
+	/* หน้า About ปรับให้เรียงลงมา */
+	.about-grid {
+		grid-template-columns: 1fr;
+		gap: 2rem;
+	}
+	
+	.about-stats {
+		grid-template-columns: repeat(2, 1fr); /* แบ่งสถิติเป็น 2 ช่อง */
+	}
+}
+
+/* สำหรับหน้าจอมือถือ (กว้างไม่เกิน 768px) */
+@media (max-width: 768px) {
+	/* ปรับเมนูด้านบน (Navbar) */
+	.navbar {
+		flex-direction: column; /* โลโก้อยู่บน เมนูอยู่ล่าง */
+		gap: 1rem;
+		padding: 1rem;
+	}
+	
+	.nav-links {
+		flex-wrap: wrap; /* ให้เมนูตัดขึ้นบรรทัดใหม่ถ้าจอไม่พอ */
+		justify-content: center;
+		gap: 0.8rem;
+		font-size: 0.9rem;
+	}
+
+	/* ปรับแบนเนอร์ (Hero Section) */
+	.hero-section {
+		padding: 6rem 1rem; /* ลดความสูงลง */
+	}
+	
+	.hero-content h1 {
+		font-size: 1.8rem; /* ลดขนาดตัวอักษรลง */
+	}
+	
+	.hero-content p {
+		font-size: 1rem;
+	}
+
+	/* ปรับช่องไฟ (Padding) ของ Section ต่างๆ */
+	.content-section {
+		padding: 0 1rem;
+		margin: 3rem auto;
+	}
+
+	/* ปรับขนาดตัวอักษรในกล่องโค้ด */
+	.code-block {
+		padding: 1rem;
+	}
+	
+	.code-block code {
+		font-size: 0.85rem;
+	}
+
+	/* ปรับขนาดการ์ด */
+	.card {
+		padding: 1.5rem;
+	}
+	
+	/* ปรับขนาดกล่องบทเรียน */
+	.lesson-content-box {
+		padding: 1.5rem;
+	}
+
+	/* ปรับกล่อง Donate */
+	.donate-container {
+		padding: 2rem 1rem;
+	}
+
+	/* ซ่อนข้อความที่ยาวเกินไปใน Playground (ถ้ามี) */
+	.panel-header {
+		font-size: 0.8rem;
+	}
+}
+
+/* สำหรับหน้าจอมือถือขนาดเล็กมาก (กว้างไม่เกิน 480px) */
+@media (max-width: 480px) {
+	/* ลดขนาดฟอนต์ของโลโก้ */
+	.logo {
+		font-size: 1.5rem;
+	}
+	
+	/* ทำให้การ์ดภาษาและบทเรียนเต็มความกว้าง */
+	.card-container {
+		grid-template-columns: 1fr;
+	}
+
+	/* ปุ่มกดแบบต่างๆ */
+	.btn-primary, .btn-secondary, .btn-small {
+		width: 100%;
+		text-align: center;
+		margin-bottom: 0.5rem;
+	}
+	
+	.hero-content h1 {
+		font-size: 1.5rem;
+	}
+}
