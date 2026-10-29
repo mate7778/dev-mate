@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>VB.NET Basics - Dev-Mate</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header>
+		<nav class="navbar">
+			<a href="index.html" class="logo">Dev-Mate</a>
+			<ul class="nav-links">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About us</a></li>
+				<li><a href="languages.html">Languages</a></li>
+				<li><a href="service.html">Service</a></li>
+				<li><a href="playground.html">Playground</a></li>
+				<li><a href="contact.html">Contact us</a></li>
+				<li><a href="donate.html">Donate 💖</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<section class="hero-static">
+			<div class="hero-content">
+				<h1>ภาษา VB.NET พื้นฐาน</h1>
+				<p>ภาษาที่อ่านง่ายที่สุด คล้ายภาษาอังกฤษ และเป็นดาวเด่นบนแพลตฟอร์ม Windows</p>
+			</div>
+		</section>
+
+		<section class="content-section" style="text-align: left; max-width: 800px;">
+			
+			<div class="lesson-content-box">
+				<h2>1. VB.NET คืออะไร?</h2>
+				<p>VB.NET (Visual Basic .NET) เป็นภาษาที่พัฒนาโดย Microsoft ต่อยอดมาจากภาษา Visual Basic เดิม จุดเด่นที่สุดของมันคือ <strong>Syntax ที่อ่านง่ายมาก</strong> ใครที่เคยเขียนภาษาสคริปต์อื่นๆ อย่าง Python หรือ JavaScript มาบ้าง จะพบว่า VB อ่านเข้าใจง่ายไม่แพ้กันเลยครับ</p>
+			</div>
+
+			<div class="lesson-content-box">
+				<h2>2. โครงสร้างโปรแกรมแรก (Hello World)</h2>
+				<p>ใน VB.NET เรามักจะใช้ฟังก์ชัน <code>Console.WriteLine</code> ในการแสดงผลข้อความออกทางหน้าจอ</p>
+				
+				<div class="code-block">
+<pre><code>Module Program
+    Sub Main()
+        ' พิมพ์ข้อความออกหน้าจอ
+        Console.WriteLine("Hello, World!")
+    End Sub
+End Module</code></pre>
+				</div>
+			</div>
+
+			<div class="lesson-content-box">
+				<h2>3. ตัวแปร (Variables)</h2>
+				<p>VB.NET มีการประกาศตัวแปรที่ชัดเจน เราใช้คำว่า <code>Dim</code> (Dimension) ในการสร้างตัวแปร</p>
+				
+				<div class="code-block">
+<pre><code>Dim name As String = "Mate"
+Dim age As Integer = 25
+
+Console.WriteLine("สวัสดี " & name)
+Console.WriteLine("อายุ: " & age)</code></pre>
+				</div>
+				<p><em>* สังเกตว่า VB ใช้เครื่องหมาย <code>&</code> ในการเชื่อมข้อความ (String Concatenation) แทนเครื่องหมาย <code>+</code> หรือ <code>.</code> ในภาษาอื่นๆ ครับ</em></p>
+			</div>
+
+			<div class="lesson-content-box">
+				<h2>4. เงื่อนไข (If-Else)</h2>
+				<p>การเขียนเงื่อนไขใน VB จะปิดท้ายด้วย <code>End If</code> เสมอ ทำให้อ่านง่ายและไม่สับสน</p>
+				
+				<div class="code-block">
+<pre><code>Dim score As Integer = 85
+
+If score >= 80 Then
+    Console.WriteLine("ยอดเยี่ยม")
+ElseIf score >= 50 Then
+    Console.WriteLine("ผ่าน")
+Else
+    Console.WriteLine("ต้องปรับปรุง")
+End If</code></pre>
+				</div>
+			</div>
+
+			<div class="lesson-content-box">
+				<h2>5. ลูป (For Loop)</h2>
+				<p>การวนซ้ำใน VB จะใช้คำว่า <code>For ... Next</code></p>
+				
+				<div class="code-block">
+<pre><code>For i As Integer = 1 To 5
+    Console.WriteLine("รอบที่ " & i)
+Next</code></pre>
+				</div>
+			</div>
+
+			<!-- ปุ่มนำทาง -->
+			<div style="margin-top: 4rem; text-align: center; padding-top: 2rem; border-top: 1px solid #eee;">
+				<h3 style="margin-bottom: 1rem;">ดูตัวอย่างโค้ด VB เพิ่มเติมได้ที่ Playground</h3>
+				<div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+					<a href="playground.html" class="btn-primary">ไปที่ Playground</a>
+					<a href="languages.html" class="btn-secondary" style="padding: 0.8rem 2rem; border-radius: 5px; text-decoration: none; border: 1px solid #ccc;">กลับไปหน้าภาษา</a>
+				</div>
+			</div>
+
+		</section>
+	</main>
+
+	<footer>
+		<p>&copy; 2026 Dev-Mate. Learn Coding for free. All rights reserved.</p>
+	</footer>
+</body>
+</html>

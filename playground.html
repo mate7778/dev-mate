@@ -130,15 +130,17 @@ console.log("ผลบวกคือ:", a + b);</textarea>
 							<button onclick="showOtherCode('csharp')" class="btn-secondary btn-small">C#</button>
 							<button onclick="showOtherCode('swift')" class="btn-secondary btn-small">Swift</button>
 							<button onclick="showOtherCode('go')" class="btn-secondary btn-small">Go</button>
+							<button onclick="showOtherCode('vb')" class="btn-secondary btn-small">VB.NET</button>
 						</div>
 
 						
 						<div class="code-block" style="text-align: left; max-width: 800px; margin: 0 auto;">
 							<pre><code id="other-code-display">// เลือกภาษาด้านบนเพื่อดูตัวอย่างโค้ด</code></pre>
-						</div>						
-							<div style="margin-top: 2rem; display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-    							<a href="languages.html" class="btn-primary btn-small" style="text-decoration: none;">ไปที่หน้าบทเรียน</a>
-    							<a href="create-code.html" class="btn-secondary btn-small" style="text-decoration: none; border: 1px solid #ccc;">แนะนำโปรแกรมเขียนโค้ด</a>
+						</div>
+						
+						<div style="margin-top: 2rem; display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+							<a href="languages.html" class="btn-primary btn-small" style="text-decoration: none;">ไปที่หน้าบทเรียน</a>
+							<a href="create-code.html" class="btn-secondary btn-small" style="text-decoration: none; border: 1px solid #ccc;">แนะนำโปรแกรมเขียนโค้ด</a>
 						</div>
 					</div>
 				</div>
@@ -260,7 +262,8 @@ console.log("ผลบวกคือ:", a + b);</textarea>
 			cpp: `#include &lt;iostream&gt;\nusing namespace std;\n\nint main() {\n    cout &lt;&lt; "Hello, C++!" &lt;&lt; endl;\n    return 0;\n}`,
 			csharp: `using System;\n\nclass Program {\n    static void Main() {\n        Console.WriteLine("Hello, C#!");\n    }\n}`,
 			swift: `import Foundation\n\nprint("Hello, Swift!")`,
-			go: `package main\n\nimport "fmt"\n\nfunc main() {\n    fmt.Println("Hello, Go!")\n}`
+			go: `package main\n\nimport "fmt"\n\nfunc main() {\n    fmt.Println("Hello, Go!")\n}`,
+			vb: `Module Program\n    Sub Main()\n        Console.WriteLine("Hello, VB.NET!")\n    End Sub\nEnd Module`
 		};
 
 		function showOtherCode(lang) {
